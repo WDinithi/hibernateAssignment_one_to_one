@@ -12,16 +12,10 @@ public class Author {
     String First_name;
     String Last_name;
 
-    public List<Book> books() {
-        return books;
-    }
 
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
+    @OneToOne
+    private Book B_id;
 
-    @OneToOne(mappedBy = "Book")
-    private List<Book> books;
 
     public Author() {
 
